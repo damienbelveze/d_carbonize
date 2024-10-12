@@ -116,7 +116,9 @@ Do not trust data repositories that do not provide identifiers to datasets
 :::
 ::::
 
-# Findability in FAIR principles
+## Findability in FAIR principles
+
+FAIR principles :notebook: @gorgolewskiPracticalGuideImproving2016
 
 ![](images/FAIR1.png)
 
@@ -175,8 +177,7 @@ Openness may be limited by:
    * industrial interest
    * intellectual property (id data are of intellectural nature : photographs, texts)
 
-# Access to data: play by the rules
-
+## Access to data: play by the rules
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -189,10 +190,10 @@ Openness may be limited by:
 
 - if Available Upon Request (AUR): somebody has to answer the request
 
--  n=3416 : no answer or negative answer without any justification
+-  n=3416 : no answer or negative answer without any justification :notebook: (@gabelicaManyResearchersWere2022a)
 :::
 :::{.notes}
-
+a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors did not respond to requests or responded negatively without justification
 :::
 :::
 ::::
@@ -237,8 +238,9 @@ Openness may be limited by:
 :::
 ::::
 
-# 
 
 
 # References
+
+
 
