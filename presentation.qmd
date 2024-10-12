@@ -66,7 +66,7 @@ csl: nature.csl
 :::
 :::{.column width="50%"}
 
-remember the [Lancetgate](https://theconversation.com/lancet-gate-in-the-covid-19-pandemic-era-is-it-alright-for-science-to-be-wrong-140715).
+remember the [Lancetgate](https://theconversation.com/lancet-gate-in-the-covid-19-pandemic-era-is-it-alright-for-science-to-be-wrong-140715). See also [here](https://forschungsdaten-thueringen.de/stories/articles/20201029-clone-wars-177.html)
 
 no reproductibility = no public trust in Science
 
@@ -218,6 +218,22 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 :::
 ::::
 
+## use open formats
+
+::::{.columns}
+:::{.column width="50%"}
+
+![](images/error_excel.jpg)
+:::
+:::{.column width="50%"}
+:::{.incremental}
+- cf. RDM scary tale ([costly birthdays](https://forschungsdaten-thueringen.de/stories/articles/counter-eng.html))
+- choose non proprietary software (forget Microsoft)
+- use transparent tools (R is a good option)
+:::
+:::
+::::
+
 
 # reusability
 
@@ -231,13 +247,21 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 
 <span class="opacity">2. How to make your data accessible</span>
 
-<span class="title-font">3. How to make your data interoperable</span>
+<span class="opacity">3. How to make your data interoperable</span>
 
-<span class="opacity">4. How to make your data reusable</span>
+<span class="title-font">4. How to make your data reusable</span>
 
 :::
 ::::
 
+## provide an open and standard licence
+
+:::{.incremental}
+- FR: 2 options = ODBL / Etalab
+- you have the **authorship** but not the **ownership* of the data
+- you must be credited (CC:by 4.0 is also possible)
+- But, access limitations are regulated (it's not up to you)
+:::
 
 
 # References
