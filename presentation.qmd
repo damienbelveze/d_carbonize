@@ -28,11 +28,26 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
+# 
+
+::::{.columns}
+:::{.column width="50%"}
+![](images/logo_ardoise.png){ width="50%"}
+:::
+:::{.column width="50%"}
+:::{.incremental}
+- ARDoISE : Rennes data hub for researchers
+- this [presentation files](https://github.com/damienbelveze/d_carbonize) are available online
+- speakers notes may be displayed by pressing S key
+:::
+:::
+::::
+
 # 3 pillars of open science
 
 ::::{.columns}
 :::{.column width="50%"}
-<img src="images/3_pillars.png">
+![](images/3_pillars.png){#fig-pillars fig-alt="piliers"}
 :::
 :::{.column width="50%"}
 :::{.incremental}
@@ -70,7 +85,7 @@ remember the [Lancetgate](https://theconversation.com/lancet-gate-in-the-covid-1
 
 no reproductibility = no public trust in Science
 
-first step: your paper must provide a DAS (Data availibily statement)
+first step: your paper must provide a DAS (Data availabily statement)
 
 :::
 ::::
@@ -80,7 +95,7 @@ first step: your paper must provide a DAS (Data availibily statement)
 
 ::::{.columns}
 :::{.column width="50%"}
-![](images/finger.gif)
+![](images/finger.gif){fig-alt="animation of fingers counting from one to five"}
 :::
 :::{.column width="50%"}
 
@@ -91,15 +106,15 @@ first step: your paper must provide a DAS (Data availibily statement)
 <span class="opacity">3. How to make your data interoperable</span>
 
 <span class="opacity">4. How to make your data reusable</span>
-
 :::
 ::::
 
-# Findability
+
+## Findability {.smaller}
 
 ::::{.columns}
 :::{.column width="50%"}
-<img src="images/3_pillars_2.jpg">
+![](images/3_pillars_2.jpg){#fig-pil2 fig-alt="a temple with three pillars : publication, data, source code (last one are hightlighted because are in the scope of this presentation)"}
 :::
 :::{.column width="50%"}
 ::: {.fragment fragment-index=1}
@@ -113,6 +128,9 @@ Findability through unique and perenne identifiers
 ::: {.fragment fragment-index=3}
 Do not trust data repositories that do not provide identifiers to datasets
 :::
+::: {.fragment fragment-index=4}
+Papers whith a DAS leading to open dataset **get a 25% citation benefit** compared with others :notebook: @colavizzaCitationAdvantageLinking2020 
+:::
 :::
 ::::
 
@@ -120,7 +138,31 @@ Do not trust data repositories that do not provide identifiers to datasets
 
 FAIR principles :notebook: @gorgolewskiPracticalGuideImproving2016
 
-![](images/FAIR1.png)
+![](images/FAIR1.png){#fig-fair fig-alt="This image represents the principles of the FAIR (Findable, Accessible, Interoperable, and Reusable) data framework. The image is organized into four columns, each corresponding to one of the four FAIR principles, with icons and text boxes representing specific requirements under each principle. Here's a breakdown:
+Findable (leftmost column, black background):
+A magnifying glass icon represents the ability to search and find data.
+Persistent Identifiers (PIDs) with an ID card symbol.
+Rich metadata with a stack of papers icon.
+Indexed data repositories shown as a database icon.
+PIDs in metadata with an ID card symbol and document.
+Accessible (second column, dark purple background):
+A finger pressing a button icon, representing accessibility.
+Standard communications protocol with a network diagram.
+Open, free protocol with connected nodes and dollar signs indicating cost-free access.
+Authentication, where necessary showing an ID badge icon.
+Metadata is always available with an infinity loop symbol.
+Interoperable (third column, dark red background):
+A gear icon representing interoperability.
+Vocabularies with a flowchart symbol of interconnected boxes.
+Vocabularies are FAIR with an icon of interconnected FAIR-compliant resources.
+Linked metadata symbolized by connected documents with metadata symbols.
+Reusable (rightmost column, blue/yellow/green background):
+A recycling icon symbolizing reusability.
+Metadata have multiple attributes with a document stack icon.
+Usage license represented by an open padlock and checkmark.
+Provenance with a flowchart indicating tracking data origins.
+Community standards with a symbol of a community gathered around a standard board.
+This visual emphasizes the specific aspects of data management that adhere to the FAIR principles, ensuring data is optimally used and shared across systems and communities."}
 
 
 # Speaking about repositories
@@ -153,7 +195,7 @@ FAIR principles :notebook: @gorgolewskiPracticalGuideImproving2016
 
 ::::{.columns}
 :::{.column width="50%"}
-![](images/finger.gif)
+![](images/finger.gif){fig-alt="animation of fingers counting from one to five"}
 :::
 :::{.column width="50%"}
 
@@ -181,7 +223,7 @@ Openness may be limited by:
 
 ::::{.columns}
 :::{.column width="50%"}
-<img src="images/data_available_request.jpg">
+![](images/data_available_request.jpg){#fig-das fig-alt="a meme : a female fantasy character asks twice, the first time with assurance, the second worrily to a young man if according to the data accessible on request statement she can have access to the data, the young man answers nothing but cast on her a machiavelic glance "}
 :::
 :::{.column width="50%"}
 :::{.incremental}
@@ -203,7 +245,7 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 
 ::::{.columns}
 :::{.column width="50%"}
-![](images/finger.gif)
+![](images/finger.gif){fig-alt="animation of fingers counting from one to five"}
 :::
 :::{.column width="50%"}
 
@@ -223,7 +265,7 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 ::::{.columns}
 :::{.column width="50%"}
 
-![](images/error_excel.jpg)
+![](images/error_excel.jpg){fig-alt="three chinese dragons are figured : the first one has an agressive look, this dragon embodies optimism ; the caption stands that the glass is half full, the second one has a tragic look ; the caption stands that the glass is half empty, it embodies pessimism, the third one has a crazy and funny look : this dragon cannot be taken seriously ; the caption stands that glass is january second in reference to common excel formatting number errors, when 1/2 is inadvertingly converted into a date (2nd of january)"}
 :::
 :::{.column width="50%"}
 :::{.incremental}
@@ -239,7 +281,7 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 
 ::::{.columns}
 :::{.column width="50%"}
-![](images/finger.gif)
+![](images/finger.gif){fig-alt="animation of fingers counting from one to five"}
 :::
 :::{.column width="50%"}
 
@@ -258,10 +300,79 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 
 :::{.incremental}
 - FR: 2 options = ODBL / Etalab
-- you have the **authorship** but not the **ownership* of the data
+- you have the **authorship** but not the **ownership** of the data
 - you must be credited (CC:by 4.0 is also possible)
 - But, access limitations are regulated (it's not up to you)
 :::
+
+# what about source code {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+![](images/code.gif){#fig-code fig-alt="a gif representing a sketch of a man walking, code source scrolls in this silhouette"}
+:::
+:::{.column width="50%"}
+:::{.incremental}
+- scientific integrity debates focus on data sharing practices, not enough on source code replicability
+
+- while data sharing practices are becoming standards, not enough incentive to share source code are provided :notebook: @jean-quartierSharingPracticesSoftware2024a
+
+- only a few publishers ask reviewers to replicate source code (Springer)
+:::
+:::
+::::
+
+
+## Archive and make visible
+
+![](images/code_source_executable.png){#fig-executable fig-alt="three screenshots explaining the differences between 1. binaries files 2. source code and 3. executable files"}
+
+- **source code** (not algorithm or binaries/executable)
+- A forge is not an archive (**forges disappear sometimes** - i.e Bitbucket in 2020)
+
+:::{.notes}
+Program must be written for people to read and only incidentally for machines to execute (Harold Abelson, 1985). Most of the times, compilers are not reproducible enough.
+:::
+
+## {background-color="#fef1da"}
+
+![](images/procedure.png){#fig-workflow fig-alt="a workflow diagram showing how source code can be saved directly from the forge to the Software Heritage Archive and how source code metadata can be extracted from the repo on Software Heritage to be imported into HAL archive, so that a link may be added between the publication and its underlying source code"}
+
+
+## code replicability
+
+save not only the source code files but also:
+
+::: {.fragment fragment-index=1}
+the software stack within virtual environments (venv/Renv)
+:::
+::: {.fragment fragment-index=2}
+the runtime and other Operating system settings through (Docker) images :notebook: @ziemannFivePillarsComputational2023
+:::
+::: {.fragment fragment-index=3}
+Use Guix as package manager to improve replicability :notebook: @gorgolewskiPracticalGuideImproving2016
+:::
+
+# {background-color="#fef1da"}
+
+<img src="images/question.gif">
+
+
+
+# Illustrations {.scrollable-slide}
+
+
+| figure | source et crédits       |                                                          
+|:---|:---|
+| @fig-pillars | [Di Cosmo, R. et al. Curated Archiving of Research Software Artifacts: Lessons Learned from the French Open Archive (HAL). International Journal of Digital Curation 15, 16 (2020).](https://www.researchgate.net/publication/343457606_Curated_Archiving_of_Research_Software_Artifacts_Lessons_Learned_from_the_French_Open_Archive_HAL) |
+| @fig-pil2 | [Di Cosmo, R. et al. Curated Archiving of Research Software Artifacts: Lessons Learned from the French Open Archive (HAL). International Journal of Digital Curation 15, 16 (2020).](https://www.researchgate.net/publication/343457606_Curated_Archiving_of_Research_Software_Artifacts_Lessons_Learned_from_the_French_Open_Archive_HAL) |
+| @fig-fair | [Nathan, P. Overview of Data Governance. Derwen, Inc. https://derwen.ai/s/6fqt (2019)](https://derwen.ai/s/6fqt#1)|
+| @fig-das | [template du meme](https://imgur.com/gallery/stupid-dragon-meme-template-k5UdZrs) |
+| @fig-code | [gif by yggath on Gifer](https://gifer.com/fr/5TMy) |
+| @fig-executable | Lionel Loubet, droit des données de recherchce, formation URFIST, 7 et 8 mars 2024 |
+| @fig-workflow | [Di Cosmo, R. et al. Curated Archiving of Research Software Artifacts: Lessons Learned from the French Open Archive (HAL). International Journal of Digital Curation 15, 16 (2020).](https://www.researchgate.net/publication/343457606_Curated_Archiving_of_Research_Software_Artifacts_Lessons_Learned_from_the_French_Open_Archive_HAL) |
+
+
 
 
 # References

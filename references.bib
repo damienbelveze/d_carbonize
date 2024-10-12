@@ -1,3 +1,47 @@
+@article{colavizzaCitationAdvantageLinking2020,
+  title = {The Citation Advantage of Linking Publications to Research Data},
+  author = {Colavizza, Giovanni and Hrynaszkiewicz, Iain and Staden, Isla and Whitaker, Kirstie and McGillivray, Barbara},
+  date = {2020-04-22},
+  journaltitle = {PLOS ONE},
+  shortjournal = {PLOS ONE},
+  volume = {15},
+  number = {4},
+  pages = {e0230416},
+  publisher = {Public Library of Science},
+  issn = {1932-6203},
+  doi = {10.1371/journal.pone.0230416},
+  url = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0230416},
+  urldate = {2024-10-12},
+  abstract = {Efforts to make research results open and reproducible are increasingly reflected by journal policies encouraging or mandating authors to provide data availability statements. As a consequence of this, there has been a strong uptake of data availability statements in recent literature. Nevertheless, it is still unclear what proportion of these statements actually contain well-formed links to data, for example via a URL or permanent identifier, and if there is an added value in providing such links. We consider 531, 889 journal articles published by PLOS and BMC, develop an automatic system for labelling their data availability statements according to four categories based on their content and the type of data availability they display, and finally analyze the citation advantage of different statement categories via regression. We find that, following mandated publisher policies, data availability statements become very common. In 2018 93.7\% of 21,793 PLOS articles and 88.2\% of 31,956 BMC articles had data availability statements. Data availability statements containing a link to data in a repository—rather than being available on request or included as supporting information files—are a fraction of the total. In 2017 and 2018, 20.8\% of PLOS publications and 12.2\% of BMC publications provided DAS containing a link to data in a repository. We also find an association between articles that include statements that link to data in a repository and up to 25.36\% (± 1.07\%) higher citation impact on average, using a citation prediction model. We discuss the potential implications of these results for authors (researchers) and journal publishers who make the effort of sharing their data in repositories. All our data and code are made available in order to reproduce and extend our results.},
+  langid = {english},
+  keywords = {Bibliometrics,Citation analysis,Data management,Open access publishing,Reproducibility,Science policy,Scientific publishing,Support vector machines}
+}
+
+@dataset{courtesSourceCodeArchiving2024a,
+  title = {Source {{Code Archiving}} to the {{Rescue}} of {{Reproducible Deployment}} — {{Replication Package}}},
+  author = {Courtès, Ludovic and Sample, Timothy and Simon, Tournier and Zacchiroli, Stefano},
+  date = {2024-05-23},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.11256698},
+  url = {https://zenodo.org/records/11256698},
+  urldate = {2024-07-15},
+  abstract = {Replication package for the paper: Ludovic Courtès, Timothy Sample, Simon Tournier, Stefano Zacchiroli.Source Code Archiving to the Rescue of Reproducible DeploymentACM REP'24, June 18-20, 2024, Rennes, Francehttps://doi.org/10.1145/3641525.3663622 Generating the paper The paper can be generated using the following command: guix time-machine -C channels.scm \textbackslash{}      -- shell -C -m manifest.scm  \textbackslash{}      -- make This uses GNU Guix to run~make~in the exact same computational environment used when preparing the paper. The computational environment is described by two files. The~channels.scm~file specifies the exact version of the Guix package collection to use. The~manifest.scm~file selects a subset of those packages to include in the environment. It may be possible to generate the paper without Guix. To do so, you will need the following software (on top of a Unix-like environment): GNU Make SQLite 3 GNU AWK Rubber Graphviz TeXLive Structure data/~contains the data examined in the paper scripts/~contains dedicated code for the paper logs/~contains logs generated during certain computations Preservation of Guix Some of the claims in the paper come from analyzing the Preservation of Guix (PoG) database as published on January 26, 2024. This database is the result of years of monitoring the extent to which the source code referenced by Guix packages is archived. This monitoring has been carried out by Timothy Sample who occasionally publishes reports on his personal website:~https://ngyro.com/pog-reports/latest/. The database included in this package (data/pog.sql) was downloaded from~https://ngyro.com/pog-reports/2024-01-26/pog.db~and then exported to SQL format. In addition to the SQL file, the database schema is also included in this package as~data/schema.sql. The database itself is largely the result of scripts, but also of manual adjustments (where necessary or convenient). The scripts are available at~https://git.ngyro.com/preservation-of-guix/, which is preserved in the Software Heritage archive as well:~https://archive.softwareheritage.org/swh:1:snp:efba3456a4aff0bc25b271e128aa8340ae2bc816;origin=https://git.ngyro.com/preservation-of-guix. These scripts rely on the availability of source code in certain locations on the Internet, and therefore will not yield exactly the same result when run again. Analysis Here is an overview of how we use the PoG database in the paper. The exact way it is queried to produce graphs and tables for the paper is laid out in the Makefile. The~pog-types.sql~query gives the counts of each source type (e.g. “git” or “tar-gz”) for each commit covered by the database. The~pog-status.sql~query gives the archival status of the sources by commit. For each commit, it produces a count of how many sources are~stored~in the Software Heritage archive,~missing~from it, or~unknown~if stored or missing. The~pog-status-total.sql~query does the same thing but over all sources without sorting them into individual commits. The~disarchive-ratio.sql~query estimates the success rate of Disarchive disassembly. Finally, the~swhid-ratio.sql~query gives the proportion of sources for which the PoG database has an SWHID. Estimating missing sources The Preservation of Guix database only covers sources from a sample of commits to the Guix repository. This greatly simplifies the process of collecting the sources at the risk of missing a few. We estimate how many are missed by searching Guix’s Git history for Nix-style base-32 hashes. The result of this search is compared to the hashes in the PoG database. A naïve search of Git history results in an over estimate due to Guix’s branch development model. We find hashes that were never exposed to users of ‘guix pull’. To work around this, we also approximate the history of commits available to ‘guix pull’. We do this by scraping push events from the guix-commits mailing list archives (data/guix-commits.mbox). Unfortunately, those archives are not quite complete. Missing history is reconstructed in the~data/missing-links.txt~file. This estimate requires a copy of the Guix Git repository (not included in this package). The repository can be obtained from GNU at~https://git.savannah.gnu.org/git/guix.git~or from the Software Heritage archive:~https://archive.softwareheritage.org/swh:1:snp:9d7b8dcf5625c17e42d51357848baa226b70e4bb;origin=https://git.savannah.gnu.org/git/guix.git. Once obtained, its location must be specified in the Makefile. To generate the estimate, use: guix time-machine -C channels.scm \textbackslash{}      -- shell -C -m manifest.scm  \textbackslash{}      -- make data/missing-sources.txt If not using Guix, you will need additional software beyond what is used to generate the paper: GNU Guile GNU Bash GNU Mailutils GNU Parallel Measuring link rot In order to measure link rot, we ran Guix Scheme scripts, i.e., scripts that exploit Guix as a Scheme library. The scripts depend on the state of world at the very specific moment when they ran. Hence, it is not possible to reproduce the exact same outputs. However, their tendency over the passing of time should be very similar. For running them, you need an installation of~Guix. For instance, guix repl -q scripts/table-per-origin.scm When running these scripts for the paper, we tracked their output and saved it inside the~logs directory.},
+  keywords = {digital preservation,functional package management,Guix,replicability,reproducible research,Software Heritage}
+}
+
+@article{dicosmoCuratedArchivingResearch2020,
+  title = {Curated {{Archiving}} of {{Research Software Artifacts}}: {{Lessons Learned}} from the {{French Open Archive}} ({{HAL}})},
+  shorttitle = {Curated {{Archiving}} of {{Research Software Artifacts}}},
+  author = {Di Cosmo, Roberto and Gruenpeter, Morane and Marmol, Bruno and Monteil, Alain and Romary, Laurent and Sadowska, Jozefina},
+  date = {2020-08-05},
+  journaltitle = {International Journal of Digital Curation},
+  shortjournal = {International Journal of Digital Curation},
+  volume = {15},
+  pages = {16},
+  doi = {10.2218/ijdc.v15i1.698},
+  abstract = {Software has become an indissociable support of technical and scientific knowledge. The preservation of this universal body of knowledge is as essential as preserving research articles and data sets. In the quest to make scientific results reproducible, and pass knowledge to future generations, we must preserve these three main pillars: research articles that describe the results, the data sets used or produced, and the software that embodies the logic of the data transformation. The collaboration between Software Heritage (SWH), the Center for Direct Scientific Communication (CCSD) and the scientific and technical information services (IES) of The French Institute for Research in Computer Science and Automation (Inria) has resulted in a specified moderation and curation workflow for research software artifacts deposited in the HAL the French global open access repository. The curation workflow was developed to help digital librarians and archivists handle this new and peculiar artifact - software source code. While implementing the workflow, a set of guidelines has emerged from the challenges and the solutions put in place to help all actors involved in the process.}
+}
+
 @article{gabelicaManyResearchersWere2022a,
   title = {Many Researchers Were Not Compliant with Their Published Data Sharing Statement: Mixed-Methods Study},
   shorttitle = {Many Researchers Were Not Compliant with Their Published Data Sharing Statement},
@@ -22,4 +66,47 @@
   date = {2016-04-12},
   doi = {10.1101/039354},
   abstract = {Recent years have seen an increase in alarming signals regarding the lack of replicability in neuroscience, psychology, and other related fields. To avoid a widespread crisis in neuroimaging research and consequent loss of credibility in the public eye, we need to improve how we do science. This article aims to be a practical guide for researchers at any stage of their careers that will help them make their research more reproducible and transparent while minimizing the additional effort that this might require. The guide covers three major topics in open science (data, code, and publications) and offers practical advice as well as highlighting advantages of adopting more open research practices that go beyond improved transparency and reproducibility.}
+}
+
+@online{nathanOverviewDataGovernance2019a,
+  title = {Overview of {{Data Governance}}},
+  author = {Nathan, Paco},
+  date = {2019-03-24},
+  url = {https://derwen.ai/s/6fqt},
+  urldate = {2023-01-09},
+  abstract = {Data governance is an almost overwhelming topic. This talk surveys history, themes, plus a survey of tools, process, standards, etc. Mistakes imply data quality issues, lack of availability, and other risks that prevent leveraging data. OTOH, compliance issues aim to preventing risks of leveraging data inappropriately. Ultimately, risk management plays the 'thin edge of the wedge' in enterprise.},
+  langid = {english},
+  organization = {Derwen, Inc.}
+}
+
+@article{ziemannFivePillarsComputational2023,
+  title = {The Five Pillars of Computational Reproducibility: Bioinformatics and Beyond},
+  shorttitle = {The Five Pillars of Computational Reproducibility},
+  author = {Ziemann, Mark and Poulain, Pierre and Bora, Anusuiya},
+  date = {2023-11-01},
+  journaltitle = {Briefings in Bioinformatics},
+  shortjournal = {Briefings in Bioinformatics},
+  volume = {24},
+  number = {6},
+  pages = {bbad375},
+  issn = {1477-4054},
+  doi = {10.1093/bib/bbad375},
+  url = {https://doi.org/10.1093/bib/bbad375},
+  urldate = {2023-10-26},
+  abstract = {Computational reproducibility is a simple premise in theory, but is difficult to achieve in practice. Building upon past efforts and proposals to maximize reproducibility and rigor in bioinformatics, we present a framework called the five pillars of reproducible computational research. These include (1) literate programming, (2) code version control and sharing, (3) compute environment control, (4) persistent data sharing and (5) documentation. These practices will ensure that computational research work can be reproduced quickly and easily, long into the future. This guide is designed for bioinformatics data analysts and bioinformaticians in training, but should be relevant to other domains of study.}
+}
+
+@article{jean-quartierSharingPracticesSoftware2024a,
+  title = {Sharing Practices of Software Artefacts and Source Code for Reproducible Research},
+  author = {Jean-Quartier, Claire and Jeanquartier, Fleur and Stryeck, Sarah and Simon, Jörg and Söser, Birgit and Hasani-Mavriqi, Ilire},
+  date = {2024-08-11},
+  journaltitle = {International Journal of Data Science and Analytics},
+  shortjournal = {Int J Data Sci Anal},
+  issn = {2364-4168},
+  doi = {10.1007/s41060-024-00617-7},
+  url = {https://doi.org/10.1007/s41060-024-00617-7},
+  urldate = {2024-09-19},
+  abstract = {While source code of software and algorithms depicts an essential component in all fields of modern research involving data analysis and processing steps, it is uncommonly shared upon publication of results throughout disciplines. Simple guidelines to generate reproducible source code have been published. Still, code optimization supporting its repurposing to different settings is often neglected and even less thought of to be registered in catalogues for a public reuse. Though all research output should be reasonably curated in terms of reproducibility, it has been shown that researchers are frequently non-compliant with availability statements in their publications. These do not even include the use of persistent unique identifiers that would allow referencing archives of code artefacts at certain versions and time for long-lasting links to research articles. In this work, we provide an analysis on current practices of authors in open scientific journals in regard to code availability indications, FAIR principles applied to code and algorithms. We present common repositories of choice among authors. Results further show disciplinary differences of code availability in scholarly publications over the past years. We advocate proper description, archiving and referencing of source code and methods as part of the scientific knowledge, also appealing to editorial boards and reviewers for supervision.},
+  langid = {english},
+  keywords = {Artificial Intelligence,FAIR principles,Open science,Reproducibility,Software availability,Source code}
 }

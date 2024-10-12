@@ -43,6 +43,12 @@
   max-height: unset !important;
 }
 
+/* Make specific slide scrollable */
+.scrollable-slide {
+  height: 100vh; /* Set the height to viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
 
 /* CSS for the logo on the title slide */
 
