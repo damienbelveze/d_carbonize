@@ -62,10 +62,14 @@ csl: nature.csl
 :::
 ::::
 
+:::{.notes}
+FAIR was originally applied to data (>2016). at the beginning, researchers thought difficult to apply these concepts to research software, because software evolves in time and receives continuous improvements, while datasets remain unchanged after publication ; but the community led by FAIR4RS organisation showed that there more benefits than drawbacks to use FAIR for research software. See for instance :notebook: @barkerIntroducingFAIRPrinciples2022
+:::
+
 # data and software management plans
 
 - information required by funding bodies (ANR, OpenAire)
-- first draft must be transmitted no later than 6 months after contract is signed
+- first draft must be sent to the funder no later than 6 months after contract is signed
 - template available on [DMP OPIDOR](https://dmp.opidor.fr/)
 - Contact ARDoISE data hub (through DMP OPIDOR or direct mail to [guichet-ardoise@groupes.renater.fr](mailto:https://groupes.renater.fr/sympa/info/guichet-ardoise))
 
@@ -90,6 +94,11 @@ first step: your paper must provide a DAS (Data availabily statement)
 :::
 ::::
 
+:::{.notes}
+what are articles published without their data if not jockeys riding invisible horses?
+
+LancetGate: may be you remember the LancetGate when in the peak dot the COVID outbreak the prestigious journal The Lancet had to retract an article that they published because it had been reviewed without the data, and when researchers outside the editorial board asked for the data, nor the Journal neither the authors themselves coud provide, as if they had been forged (we'll never know)?
+:::
 
 # FAIR principles
 
@@ -118,7 +127,7 @@ first step: your paper must provide a DAS (Data availabily statement)
 :::
 :::{.column width="50%"}
 ::: {.fragment fragment-index=1}
-Findability through unique and perenne identifiers
+Findability through unique and permanent identifiers
 :::
 ::: {.fragment fragment-index=2}
 | publication | dataset | software |
@@ -126,10 +135,13 @@ Findability through unique and perenne identifiers
 | doi, HAL-ID | DOI, Ark | SWHID |
 :::
 ::: {.fragment fragment-index=3}
-Do not trust data repositories that do not provide identifiers to datasets
+Let's have a look to <a href="https://www.re3data.org/search?query=carbon"target="_blank">some of them</a>
 :::
 ::: {.fragment fragment-index=4}
-Papers whith a DAS leading to open dataset **get a 25% citation benefit** compared with others :notebook: @colavizzaCitationAdvantageLinking2020 
+Do not trust data repositories that do not provide identifiers to deposited datasets
+:::
+::: {.fragment fragment-index=5}
+Papers whith a DAS leading to open dataset **get a 25% citation benefit** compared with others :notebook: @colavizzaCitationAdvantageLinking2020a 
 :::
 :::
 ::::
@@ -181,7 +193,7 @@ This visual emphasizes the specific aspects of data management that adhere to th
 
 - Is the repository future-proof? : the chosen repository should have been online for at least 5 years.
 
-- **Does the repository's policy restricts the choice of licences that can assigned to your data? : if you cannot share your data under the licence you have chosen, you would better find a better offer elsewhere.**
+- **Does the repository's policy restricts the choice of licences that can assigned to your data? : if you cannot share your data under the licence you have chosen, you would better find a better offer elsewhere.** For instance Dryad makes compulsory the use of CC0 to datasets, which is not aligned with French author rights.
 
 - **Are deposits curated by someone? Without a proper curation, your may neglect important metadata in your dataset's description which could have a negative impact on its findability and reusability.**
 
@@ -228,7 +240,7 @@ Openness may be limited by:
 :::{.column width="50%"}
 :::{.incremental}
 
-- A DAS cannot contain: Data not available
+- A DAS cannot contain: "Data not available" :angry:
 
 - if Available Upon Request (AUR): somebody has to answer the request
 
@@ -236,6 +248,10 @@ Openness may be limited by:
 :::
 :::{.notes}
 a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors did not respond to requests or responded negatively without justification
+
+Outside the openness of the data as set by the authors, Accessibility is considered as a rather straightforward condition to implement, but actullay it's not : think of connectivity issues for researchers in developing countries, how to adress the probleme of lack of bandwidth for "the last kilometer" (see for instance :notebook: @shanahanRethinkingFAIRData2022a )
+
+@brownFixingScienceMeans2024a : A DAS in itself is not enough, what counts is the accessibility of data whenever it's possible
 :::
 :::
 ::::
@@ -269,13 +285,16 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 :::
 :::{.column width="50%"}
 :::{.incremental}
-- cf. RDM scary tale ([costly birthdays](https://forschungsdaten-thueringen.de/stories/articles/counter-eng.html))
+- cf. RDM scary tale ([costly birthdays](https://forschungsdaten-thueringen.de/stories/articles/counter-eng.html)) 
 - choose non proprietary software (forget Microsoft)
 - use transparent tools (R is a good option)
 :::
 :::
 ::::
 
+:::{.notes}
+In R, every data manipulation is traceable (codeline) ; an unexpected conversion can simply not occur. Provided the packages versions used are still available, anything can be replicated from the beginning.
+:::
 
 # reusability
 
@@ -299,10 +318,14 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 ## provide an open and standard licence
 
 :::{.incremental}
-- FR: 2 options = ODBL / Etalab
+- FR: 2 options are recommended = ODBL / Etalab
 - you have the **authorship** but not the **ownership** of the data
 - you must be credited (CC:by 4.0 is also possible)
 - But, access limitations are regulated (it's not up to you)
+:::
+
+:::{.notes}
+first and foremost a matter of what researchers will entitled to do with your data, a matter of licence which must be clear and standard.
 :::
 
 # what about source code {.smaller}
@@ -317,10 +340,15 @@ a 2022 study of 3416 articles with a DAS showed that in 93% of cases, authors di
 
 - while data sharing practices are becoming standards, not enough incentive to share source code are provided :notebook: @jean-quartierSharingPracticesSoftware2024a
 
-- only a few publishers ask reviewers to replicate source code (Springer)
+- only a few publishers ask reviewers to replicate source code (NeurIPS)
 :::
 :::
 ::::
+
+:::{.notes}
+progress in computing sciences, because source code plays the role of methodology 
+but no substantial improvements in other fields of knowledge
+:::
 
 
 ## Archive and make visible
@@ -355,8 +383,14 @@ Use Guix as package manager to improve replicability :notebook: @gorgolewskiPrac
 
 # {background-color="#fef1da"}
 
-<img src="images/question.gif">
+```{r eval=TRUE}
+sessionInfo()
+```
 
+
+# {background-color="#fef1da"}
+
+<img src="images/question.gif">
 
 
 # Illustrations {.scrollable-slide}
