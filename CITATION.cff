@@ -1,0 +1,37 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  D-carbonize : implementing FAIR principles to data and
+  source code
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Damien
+    family-names: Belvèze
+    email: damien.belveze@univ-rennes.fr
+    affiliation: Université de Rennes
+    orcid: 'https://orcid.org/0000-0001-9020-2148'
+repository-code: 'https://github.com/damienbelveze/d_carbonize'
+url: >-
+  https://github.com/damienbelveze/d_carbonize/presentation.html
+abstract: >-
+  According to the open-source paradigm, research data
+  collected by researchers should be made as open as
+  possible and as closed as necessary. FAIR standards were
+  designed to help scholars achieve this goal.Our
+  presentation aims to explain how these standards can be
+  met during a research project and why their implementation
+  should be anticipated in the initial draft of a data
+  management plan. In our scope, we will include the
+  management of research source code, which is necessary to
+  process this data.
+keywords:
+  - FAIR principles
+  - data management
+  - source code management
+  - 'CC:by 4-0'
+license: CC-BY-4.0
